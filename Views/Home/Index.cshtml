@@ -1,0 +1,40 @@
+﻿@model ArchivoViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Ferreteria ALCA S.A.</h1>
+</div>
+<div style="width: 100%;">
+    <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="AnalizarXML">
+        <div class="form-group">
+            <div class="card">
+                <div class="form-group d-flex align-items-center flex-column" style="width: 100%; height:150px; border: solid 1px black;">
+                    <p><h4>Escoja el archivo que desea analizar:</h4></p>
+                    <input style="height:35px;" type="file" name="files" multiple />
+                </div>
+            </div>
+        </div>
+        <div class="form-group d-flex justify-content-center p-t-6" style="width: 100%; height:50px; border: solid 1px black;">
+                <input class="bg-success w-25 h-100 text-light font-weight-bold" type="submit" value="Upload" />
+        </div>
+    </form>
+</div>
+
+@*<div>
+    <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="AnalizarXML" >
+        <div class="form-group">
+            <input type="file" name="files"/>
+
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Upload"/>
+
+        </div>
+        
+    </form>
+</div>
+*@
+
